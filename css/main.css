@@ -1,15 +1,41 @@
 * {
-  -ms-touch-action: pan-y;
-      touch-action: pan-y;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 .text-small {
   font-size: .75rem;
 }
 
-.table th,
+.table-responsive .table {
+  max-width: none;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.table thead th,
 .table td {
   vertical-align: middle;
+}
+
+.table-fixed-head {
+  overflow-y: auto;
+  height: calc(100ch - 300px);
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.table-fixed-head::-webkit-scrollbar {
+  display: none;
+}
+
+.table-fixed-head thead,
+.table-fixed-head th,
+.table-fixed-head tfoot td {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .form-width-wrapper {
@@ -19,15 +45,14 @@
   background-color: #fff;
 }
 
-.table-scroll-wrapper {
-  height: calc(100ch - 300px);
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.custom-label-none::before {
+  top: .5rem;
+  left: -1.25rem;
 }
 
-.table-scroll-wrapper::-webkit-scrollbar {
-  display: none;
+.custom-label-none::after {
+  top: .5rem;
+  left: -1.25rem;
 }
 
 .container-login {

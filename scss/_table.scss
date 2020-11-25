@@ -1,7 +1,32 @@
+.table-responsive {
+  .table {
+    max-width: none;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch !important;
+  }
+} 
+
 .table {
-  th, 
+  thead th, 
   td {
     vertical-align: middle;
+  }
+}
+
+.table-fixed-head{ 
+  overflow-y: auto; 
+  height: calc(100ch - 300px); 
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  thead,
+  th,
+  tfoot td {
+    position: sticky;
+    top: 0;
   }
 }
 
@@ -12,12 +37,13 @@
   background-color: #fff;
 }
 
-.table-scroll-wrapper {
-  height: calc(100ch - 300px);
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
+.custom-label-none {
+  &::before {
+    top: .5rem;
+    left: -1.25rem;
+  }
+  &::after {
+    top: .5rem;
+    left: -1.25rem;
   }
 }
