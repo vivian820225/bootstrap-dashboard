@@ -1,0 +1,45 @@
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+  &:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+  }
+}
+
+.navbar {
+  .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+  }
+  .navbar-toggler {
+    top: .25rem;
+    right: 1rem;
+  }  
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+
+.navbar-dark {
+  .navbar-toggler {
+    color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,.1);
+  }
+}
+
+.navbar-brand {
+  margin-left: .75rem;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+}
+
+.username {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

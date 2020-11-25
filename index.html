@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Bootstrap Backstage</title>
+</head>
+<body>
+  <!-- 側邊主選單 -->
+  <div id="mainMenu">
+    <nav id="mainMenu" class="main-menu">
+        <ul class="nav flex-column text-color">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              首頁 <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="orders.html">
+              訂單資訊
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle">
+              系統管理
+            </a>
+            <ul class="sub-menu">
+              <li>
+                <a href="#" class="nav-link dropdown-toggle">帳號管理</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="#" class="nav-link">選項一</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">選項二</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="nav-link">EC 資料</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link">門市資料</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link">修改密碼</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle">
+              客服管理
+            </a>
+            <ul class="sub-menu">
+              <li>
+                <a href="#" class="nav-link">項目一</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link">項目二</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+    </nav>
+  </div>
+  <!-- 側邊主選單 END -->
+
+  <div id="panel" class="pb-5">
+    <!-- 上方深色導覽 -->
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+      <div class="col-md-3 col-lg-2 mr-0 px-3 d-flex d-md-block align-items-center justify-content-md-start justify-content-between">
+        <a id="toggleBtn" class="toggle-button">
+          <span class="navbar-toggler-icon"></span>
+        </a>
+        <a class="navbar-brand" href="#">LOGO</a>
+        <a href="#" class="d-md-none text-nowrap text-white">登出</a>
+      </div>
+      <input class="form-control form-control-dark w-100" type="text" placeholder="請輸入關鍵字" aria-label="Search">
+      <input class="btn btn-outline-secondary ml-1 d-none d-md-block" type="button" value="搜尋">
+      <ul class="navbar-nav px-3 d-none d-md-flex">
+        <li class="nav-item text-nowrap">
+          <p class="mb-0 text-white username"><span>使用者代稱</span> 您好</p>
+        </li>
+        <li class="nav-item text-nowrap ml-3">
+          <a class="text-white" href="#">登出</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- 上方深色導覽 END -->
+  
+    <div class="container-fluid">
+      <div class="row">
+        <main role="main" class="col-md-12 ml-sm-auto px-md-4">
+          <!-- 主要內容 -->
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">訂單查詢</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <button type="button" class="btn btn-sm btn-primary mr-2">新增項目</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary mr-2" data-toggle="collapse" data-target="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">條件篩選</button>
+              <div class="dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  下拉選項
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">項目一</a>
+                  <a class="dropdown-item" href="#">項目二</a>
+                  <a class="dropdown-item" href="#">項目三</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 篩選條件 -->
+          <!-- 修改 col-md- 的數字即可調整欄位寬度，最小值 1 ，最大值 12，建議 form-row 中的 col 相加為 12 版面會比較好看 -->
+          <!-- 若不想特別限定欄位寬度，則可使用 col-auto -->
+          <div class="collapse mb-3" id="collapseFilter">
+            <div class="card card-body">
+              <!-- 兩欄 -->
+              <h5 class="h5">欄位分類小標題</h5>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="input01">輸入欄位</label>
+                  <input type="text"" class="form-control" id="input01" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inlineFormSelect">下拉欄位</label>
+                  <select class="custom-select mr-sm-2" id="inlineFormSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <hr class="mt-0 mb-3">
+              <!-- 三欄 -->
+              <h5 class="h5">欄位分類小標題</h5>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="input03">輸入欄位</label>
+                  <input type="text"" class="form-control" id="input03">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inlineFormSelect02">下拉欄位</label>
+                  <select class="custom-select mr-sm-2" id="inlineFormSelect02">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="input05">輸入欄位</label>
+                  <input type="text" class="form-control" id="input05">
+                </div>
+              </div>
+              <hr class="mt-0 mb-3">
+              <!-- 四欄 -->
+              <h5 class="h5">欄位分類小標題</h5>
+              <div class="form-row">
+                <div class="form-group col-md-3">
+                  <label for="input06">輸入欄位</label>
+                  <input type="text"" class="form-control" id="input06">
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="input07">輸入欄位</label>
+                  <input type="text" class="form-control" id="input07">
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="input08">輸入欄位</label>
+                  <input type="text" class="form-control" id="input08">
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="input09">輸入欄位</label>
+                  <input type="text" class="form-control" id="input09">
+                </div>
+              </div>
+              <hr class="mt-0 mb-3">
+              <!-- Checkbox -->
+              <div class="form-row">
+                <div class="form-group col-md-3">
+                  <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#collapseCheckbox01" aria-expanded="false" aria-controls="collapseCheckbox01">包含狀態展開</button>
+                  <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#collapseCheckbox02" aria-expanded="false" aria-controls="collapseCheckbox02">未包含狀態展開</button>
+                </div>
+              </div>
+              <div class="collapse mb-3" id="collapseCheckbox01">
+                <div class="card card-body">
+                  <div class="form-row">
+                    <div class="col-auto">
+                      <div class="custom-control custom-checkbox mr-sm-2">
+                        <input type="checkbox" class="custom-control-input" id="customControl">
+                        <label class="custom-control-label" for="customControl">狀態一</label>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="custom-control custom-checkbox mr-sm-2">
+                        <input type="checkbox" class="custom-control-input" id="customControl02">
+                        <label class="custom-control-label" for="customControl02">狀態字數長一點</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="collapse mb-3" id="collapseCheckbox02">
+                <div class="card card-body">
+                  <div class="form-row">
+                    <div class="col-auto">
+                      <div class="custom-control custom-checkbox mr-sm-2">
+                        <input type="checkbox" class="custom-control-input" id="customControl03">
+                        <label class="custom-control-label" for="customControl03">狀態一</label>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="custom-control custom-checkbox mr-sm-2">
+                        <input type="checkbox" class="custom-control-input" id="customControl04">
+                        <label class="custom-control-label" for="customControl04">狀態一</label>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="custom-control custom-checkbox mr-sm-2">
+                        <input type="checkbox" class="custom-control-input" id="customControl05">
+                        <label class="custom-control-label" for="customControl05">狀態字數長一點</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <input type="submit"" class="btn btn-block btn-primary" value="送出查詢">
+            </div>
+          </div>
+          <!-- 篩選條件 END -->
+  
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th width="64" class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input" class="mr-1">
+                    <span class="d-none d-md-inline">全選</span>
+                  </th>
+                  <th width="128">編號</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th width="108">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,001</a>
+                  </td>
+                  <td>1,001</td>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>sit</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,002</a>
+                  </td>
+                  <td>1,002</td>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                  <td>elit</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,003</a>
+                  </td>
+                  <td>1,003</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,003</a>
+                  </td>
+                  <td>1,003</td>
+                  <td>libero</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                  <td>ante</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,004</a>
+                  </td>
+                  <td>1,004</td>
+                  <td>dapibus</td>
+                  <td>diam</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,005</a>
+                  </td>
+                  <td>1,005</td>
+                  <td>Nulla</td>
+                  <td>quis</td>
+                  <td>sem</td>
+                  <td>at</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,006</a>
+                  </td>
+                  <td>1,006</td>
+                  <td>nibh</td>
+                  <td>elementum</td>
+                  <td>imperdiet</td>
+                  <td>Duis</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,007</a>
+                  </td>
+                  <td>1,007</td>
+                  <td>sagittis</td>
+                  <td>ipsum</td>
+                  <td>Praesent</td>
+                  <td>mauris</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,008</a>
+                  </td>
+                  <td>1,008</td>
+                  <td>Fusce</td>
+                  <td>nec</td>
+                  <td>tellus</td>
+                  <td>sed</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,009</a>
+                  </td>
+                  <td>1,009</td>
+                  <td>augue</td>
+                  <td>semper</td>
+                  <td>porta</td>
+                  <td>Mauris</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,010</a>
+                  </td>
+                  <td>1,010</td>
+                  <td>massa</td>
+                  <td>Vestibulum</td>
+                  <td>lacinia</td>
+                  <td>arcu</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,011</a>
+                  </td>
+                  <td>1,011</td>
+                  <td>eget</td>
+                  <td>nulla</td>
+                  <td>Class</td>
+                  <td>aptent</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,012</a>
+                  </td>
+                  <td>1,012</td>
+                  <td>taciti</td>
+                  <td>sociosqu</td>
+                  <td>ad</td>
+                  <td>litora</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,013</a>
+                  </td>
+                  <td>1,013</td>
+                  <td>torquent</td>
+                  <td>per</td>
+                  <td>conubia</td>
+                  <td>nostra</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td>
+                    <a href="#" class="text-primary text-decoration-none">123451,014</a>
+                  </td>
+                  <td>1,014</td>
+                  <td>per</td>
+                  <td>inceptos</td>
+                  <td>himenaeos</td>
+                  <td>Curabitur</td>
+                  <td>
+                    <div class="btn-group">
+                      <input type="button" value="編輯" class="btn btn-sm btn-outline-primary">
+                      <input type="button" value="刪除" class="btn btn-sm btn-outline-danger">
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- 頁碼 -->
+            <nav aria-label="Page navigation">
+              <ul class="pagination pagination-sm justify-content-end">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item" aria-current="page">
+                  <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- 頁碼 END -->
+          </div>
+          <!-- 主要內容 END -->
+        </main>
+      </div>
+    </div>
+  </div>
+
+
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
