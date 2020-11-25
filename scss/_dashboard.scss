@@ -55,3 +55,9 @@
 .panel-top {
   padding-top: 48px;
 }
+
+@media (max-width: 768px) {
+  .panel-top {
+    padding-top: 86px;
+  }
+}

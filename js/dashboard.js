@@ -10,6 +10,7 @@ $(function() {
   // Toggle button
   var fixedHeader = document.getElementById('stickyHeader');
   var toggleBtn = document.querySelector('#toggleBtn');
+  
   toggleBtn.addEventListener('click', function() {
     this.classList.toggle('rotate');
     slideout.toggle();
