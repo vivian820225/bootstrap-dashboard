@@ -233,9 +233,11 @@
             <table class="table table-striped table-sm">
               <thead>
                 <tr>
-                  <th width="64" class="text-center">
-                    <input type="checkbox" aria-label="Checkbox for following text input" class="mr-1">
-                    <span class="d-none d-md-inline">全選</span>
+                  <th width="48" class="text-center">
+                    <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                      <input type="checkbox" class="custom-control-input" id="1">
+                      <label class="custom-control-label custom-label-none" for="1"></label>
+                    </div>
                   </th>
                   <th width="128">編號</th>
                   <th>Header</th>
@@ -250,7 +252,10 @@
               <tbody>
                 <tr>
                   <td class="text-center">
-                    <input type="checkbox" aria-label="Checkbox for following text input">
+                    <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                      <input type="checkbox" class="custom-control-input" id="2">
+                      <label class="custom-control-label custom-label-none" for="2"></label>
+                    </div>
                   </td>
                   <td>
                     <a href="#" class="text-primary text-decoration-none">123451,001</a>
@@ -270,7 +275,10 @@
                 </tr>
                 <tr>
                   <td class="text-center">
-                    <input type="checkbox" aria-label="Checkbox for following text input">
+                    <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                      <input type="checkbox" class="custom-control-input" id="3">
+                      <label class="custom-control-label custom-label-none" for="3"></label>
+                    </div>
                   </td>
                   <td>
                     <a href="#" class="text-primary text-decoration-none">123451,002</a>
@@ -290,7 +298,10 @@
                 </tr>
                 <tr>
                   <td class="text-center">
-                    <input type="checkbox" aria-label="Checkbox for following text input">
+                    <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                      <input type="checkbox" class="custom-control-input" id="4">
+                      <label class="custom-control-label custom-label-none" for="4"></label>
+                    </div>
                   </td>
                   <td>
                     <a href="#" class="text-primary text-decoration-none">123451,003</a>
@@ -397,7 +408,7 @@
                 </div>
               </div>
               <div class="col-md-3 mb-3">
-                <label for="validationCustom05">Zip</label>
+                <label for="validationCustom05">標題</label>
                 <input type="text" class="form-control" id="validationCustom05" required>
                 <div class="valid-feedback">
                   格式正確
@@ -418,51 +429,41 @@
                 <tbody>
                   <tr>
                     <td colspan="2">
-                      <div class="form-inline pl-4 pl-sm-0">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                          一般 EC
-                        </label>
+                      <div class="custom-control custom-checkbox ml-1">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">一般 EC</label>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td colspan="2">
-                      <div class="form-inline pl-4 pl-sm-0">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                          店到店
-                        </label>
+                      <div class="custom-control custom-checkbox ml-1">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">店到店</label>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td colspan="2">
-                      <div class="form-inline pl-4 pl-sm-0">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                          小 B2C
-                        </label>
+                      <div class="custom-control custom-checkbox ml-1">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label" for="customCheck3">小 B2C</label>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td colspan="2">
-                      <div class="form-inline pl-4 pl-sm-0">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                          寄件通
-                        </label>
+                      <div class="custom-control custom-checkbox ml-1">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                        <label class="custom-control-label" for="customCheck4">寄件通</label>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <div class="form-inline pl-4 pl-sm-0">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                          繳費通
-                        </label>
+                      <div class="custom-control custom-checkbox ml-1">
+                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                        <label class="custom-control-label" for="customCheck5">繳費通</label>
                       </div>
                     </td>
                     <td class="table-active">
@@ -474,17 +475,15 @@
                   </tr>
                   <tr>
                     <td>
-                      <div class="form-inline pl-4 pl-sm-0">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                          退貨通
-                        </label>
+                      <div class="custom-control custom-checkbox ml-1">
+                        <input type="checkbox" class="custom-control-input" id="customCheck6">
+                        <label class="custom-control-label" for="customCheck6">退貨通</label>
                       </div>
                     </td>
                     <td>
                       <div class="form-inline">
                         <label for="01" class="mr-1">退貨通 Sercode</label>
-                        <select id="01" class="form-control">
+                        <select id="01" class="custom-select">
                           <option selected>Choose...</option>
                           <option>...</option>
                         </select>
@@ -494,8 +493,8 @@
                   <tr>
                     <td colspan="2">
                       <div class="form-inline">
-                        <label for="01" class="mr-1">15 分鐘即時檔</label>
-                        <select id="01" class="form-control">
+                        <label for="03" class="mr-1">15 分鐘即時檔</label>
+                        <select id="03" class="custom-select">
                           <option selected>Choose...</option>
                           <option>...</option>
                         </select>
@@ -505,8 +504,59 @@
                   <tr>
                     <td colspan="2">
                       <div class="form-inline">
-                        <label for="02" class="mr-1">寄件 ECNO：</label>
-                        <input type="text"" class="form-control" id="02">
+                        <label for="04" class="mr-1">寄件 ECNO：</label>
+                        <input type="text"" class="form-control" id="04">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <div class="btn btn-block btn-outline-secondary text-left">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck7">
+                          <label class="custom-control-label" for="customCheck7">項目一</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <div class="accordion" id="accordionExample">
+                        <div class="card">
+                          <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                  <label class="custom-control-label" for="customCheck8">項目一</label>
+                                </div>
+                              </button>
+                            </h2>
+                          </div>
+                      
+                          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus sed adipisci nobis tempore molestiae consequatur omnis praesentium earum vel ducimus! Itaque neque quos corrupti at facilis voluptatum, nihil id fugit?
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="customCheck9">
+                                  <label class="custom-control-label" for="customCheck9">項目二</label>
+                                </div>
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </td>
                   </tr>
@@ -527,7 +577,7 @@
             </div>
             <div class="form-group">
               <label for="exampleFormControlSelect2">展開式選項</label>
-              <select multiple class="form-control" id="exampleFormControlSelect2">
+              <select multiple class="custom-select" id="exampleFormControlSelect2">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -535,18 +585,19 @@
                 <option>5</option>
               </select>
             </div>
+            
             <div class="form-group">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">1</label>
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="customCheck10">
+                <label class="custom-control-label" for="customCheck10">1</label>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">2</label>
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="customCheck11">
+                <label class="custom-control-label" for="customCheck11">2</label>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-                <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="customCheck12" disabled>
+                <label class="custom-control-label" for="customCheck12">3 (disabled)</label>
               </div>
             </div>
             <div class="form-group">
@@ -554,6 +605,10 @@
                 <input type="checkbox" class="custom-control-input" id="customSwitch1">
                 <label class="custom-control-label" for="customSwitch1">啟用</label>
               </div>
+            </div>
+            <div class="text-right">
+              <button class="btn btn-primary" type="submit">儲存修改</button>
+              <button class="btn btn-outline-secondary" type="button">取消</button>
             </div>
           </form>
         </div>
